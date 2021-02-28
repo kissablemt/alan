@@ -1,0 +1,48 @@
+<!--miniprogram/pages/product.wxml-->
+<!--
+<button style='color:green;width:80%;margin-top:20rpx;' bindtap='goIndex'>返回</button>
+-->
+<view class='search-box'>  
+  <view class="search"> 
+      <icon class="searchcion" size='20' type='search'></icon>  
+      <input class="" placeholder="多个关键字可用空格隔开哦~" bindinput='search'/>  
+  </view>
+</view>  
+
+<view class="func-box">
+  <!-- 
+  <view class='classification-box'>
+    <picker bindchange="classify" value="{{index}}" range="{{clsText}}">
+      <view class="picker">
+        分类：{{cls}}
+      </view>
+    </picker>
+  </view>
+  -->
+  <view class='management-box' wx:if="{{isManaging}}">
+    <button style='color:green;font-size:13px;' bindtap='updateProduct'>更新商品</button>
+    <button style='color:green;font-size:13px;' bindtap='addProduct'>添加商品</button>
+  </view>
+</view>
+
+<view class="goods-box">
+  <view wx:for="{{goods}}" wx:key="" >
+    <view wx:if="{{!item.tag}}" class='goods-list'>
+
+      <!-- 商品信息 -->
+      <view class='goods-message'>
+        <text class='gname'>{{item.name}}{{"\n"}}</text>
+        <text class='gclassification'>{{item.classification}}{{"\n"}}</text>
+        <text class='gprice'>价格：￥{{item.price}}</text>
+      </view>
+
+      <!-- 加入购物车按钮 -->
+      <view class='gbutton'> 
+        <button style='background-color:#FF9966;width: {{isManaging?50:100}}%;' bindtap="addToCart" data-ele="{{item}}" > 加入小宝匣 </button>
+        <button style='background-color:green;' wx:if="{{isManaging}}" bindtap="editProduct" data-ele="{{item}}" > 修改</button>  
+      </view>
+      
+
+    </view>
+  </view>
+</view>

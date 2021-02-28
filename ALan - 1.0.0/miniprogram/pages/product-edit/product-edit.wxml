@@ -1,0 +1,21 @@
+<!--miniprogram/pages/product-edit/product-edit.wxml-->
+<view class='details-box'>
+  <view class="input-item">
+    产品名： <input placeholder='请输入商品名' value='{{name}}' bindinput='inputName' />
+  </view>
+
+  <view class="input-item">
+    价格： <input placeholder='请输入价格' value='{{price}}' bindinput='inputPrice' />
+  </view>
+
+  <view class='classification-box'>
+    <picker bindchange="classify" value="{{index}}" range="{{clsText}}">
+      <view class="picker">
+        分类：{{cls}}
+      </view>
+    </picker>
+  </view>
+</view>
+<button style='margin-top:8%;background-color:orange; height:100rpx;width:80%;' bindtap='submit'>确认</button>
+<button style='margin-top:8%;background-color:orange; height:100rpx;width:80%;' bindtap='deleteOne'>删除</button>
+<button style='margin-top:8%;background-color:orange; height:100rpx;width:80%;' bindtap='goProduct'>返回</button>

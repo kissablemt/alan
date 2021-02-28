@@ -1,0 +1,24 @@
+/* miniprogram/pages/product-edit/product-edit.wxss */
+.input-item {
+  border: 1px  goldenrod solid;
+  border-radius: 20rpx;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20rpx;
+}
+
+.classification-box {
+  width: 40%;
+  color: rgb(241, 100, 124);
+  border: 1px goldenrod solid;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 10%;
+  margin-top: 20rpx;
+}
+
+.classification-box picker {
+  margin: 20rpx 0;
+}

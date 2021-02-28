@@ -1,0 +1,45 @@
+<!--miniprogram/pages/shoppingcart.wxml-->
+
+<!-- 购物车显示 -->
+<view class="cart-box" wx:if="{{modalHide}}">
+  <view wx:for="{{cart}}" wx:key="" class='cart-goods'>
+
+    <!-- wx:if 是否选中该商品 -->
+    <view class='icon-wrapper' bindtap="selectOne" data-index="{{index}}">
+      <icon wx:if="{{item.selected}}" class='cart-icon' type="success" color="red"  />
+      <icon wx:else type="circle" class='cart-icon'  />
+    </view>
+
+    <!-- 商品基本信息 -->
+    <view class='cart-message'>
+        <text class='gname'>{{item.name}}</text>
+        <text class='gprice'>价格：￥{{item.price}}</text>
+    </view>
+    
+    <!-- 删除按钮 -->
+    <text bindtap="deleteOne" data-index="{{index}}" class='delete'> × </text>
+    <!-- 数量控制 -->
+    <text bindtap="subOne" data-index="{{index}}" class='subtract'> - </text>
+    <text bindtap="editOne" data-index="{{index}}" class='edit'> {{item.num}} </text>
+    <text bindtap="addOne" data-index="{{index}}" class='add'> + </text>
+    
+  </view>
+</view>
+
+<!-- 底部操作栏 -->
+<view class='cart-bottom' wx:if="{{modalHide}}">
+
+  <!-- wx:if 全选框 -->
+  <icon wx:if="{{checkAll}}" class='cart-iconAll' type="success_circle" color="red" bindtap="selectAll" />
+  <icon wx:else type="circle" class='cart-iconAll' color="#ff7100" bindtap="selectAll" />
+  <text class='cart-allSelect' bindtap="selectAll">全选</text>
+
+  <!-- 总价 -->
+  <text class='cart-allPrice'>合计:</text>
+  <text class='allPrice'>￥{{totalPrice}}</text>
+  
+  <button class='btn-red' bindtap='balance' form-type='submit'>去结算</button>
+
+</view>
+
+

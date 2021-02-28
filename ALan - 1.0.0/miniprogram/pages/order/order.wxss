@@ -1,0 +1,123 @@
+/* miniprogram/pages/order/order.wxss */
+/*搜索框*/
+.search-box{  
+  margin: 10px 10px 0 0;
+  display: flex;  
+  flex-direction: row  
+}  
+.search{  
+  width: 98%;  
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+  margin-left: 20rpx;  
+}  
+.search input{  
+  margin-left: 60rpx;  
+  height: 60rpx;  
+  border-radius: 5px;  
+}  
+.searchcion {  
+  margin: 10rpx 10rpx 10rpx 10rpx;  
+  position: absolute;  
+  left:25rpx;  
+  z-index: 2;  
+  width: 20px;  
+  height: 20px;  
+  text-align: center;  
+}  
+
+.main-btn {
+  margin: 20rpx;
+}
+.order-item {
+  position: relative;
+  border: 2px orange solid;
+  border-radius: 20rpx;
+  margin: 20rpx 0;
+}
+.order-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  height: 15%;
+  font-size: 13px;
+  border-right: 1px green solid;
+}
+.order-status {
+  position: absolute;
+  right: 0;
+  width:25%;
+  top:2%;
+  font-size: 11px;
+  font-weight: bold;
+}
+.info-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 5rpx;
+}
+.info-item text {
+  margin-left: 15rpx;
+}
+
+.order-detail {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: white;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx;
+}
+.nav button {
+  width: 40%;
+  opacity: 0.8;
+}
+
+.tracknum-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+}
+
+.goods-message {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20rpx;
+  justify-content: space-around;
+  background-color: rgba(128, 128, 128, 0.295);
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+.gname{
+  font-weight: 600;
+  color: #4a4a4a;
+  font-size: 32rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.gprice {
+  font-size: 28rpx;
+  color: #f40;
+  font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+}
+.gnum {
+  position: absolute;
+  top:20rpx;
+  right:20rpx;
+  color: orange;
+}

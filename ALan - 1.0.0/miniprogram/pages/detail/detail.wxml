@@ -1,0 +1,56 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+
+<!-- 顶部功能按钮 -->
+<view class="head-btn">
+  <button style='color:red' bindtap='prevpage' wx:if="{{page!=3}}">{{prevpageText[page]}}</button>
+  <!--
+  <button style='color:{{payed?"gray":"red"}};font-size:15px;padding-top:10rpx;' bindtap='uploadPic' wx:else>上传付款截图</button>
+  -->
+  <button style='color:green' bindtap='nextpage' wx:if="{{page==1}}">填写信息</button>
+  <button style='color:green' bindtap='submitDetails' wx:elif="{{page==2}}">生成订单</button>
+  <button style='color:green' bindtap='done' wx:else>完成</button>
+</view>
+
+<view class="page1" wx:if="{{page==1}}">
+  <view wx:for="{{cart}}" wx:key="" >
+      <view wx:if="{{item.selected}}" class='mgoods-list'>
+        <view class='mgoods-message'>
+          <text class='mgname'>{{item.name}}{{"\n"}}</text>
+          <text class='mgprice'>价格：￥{{item.price}}</text>
+          <text class='medit'> x{{item.num}} </text>
+        </view>
+      </view>
+    </view>
+    <!-- 总价 -->
+    <text class='cart-allPrice'>合计:</text>
+    <text class='allPrice'>￥{{totalPrice}}</text>
+</view>
+
+<view class="page2" wx:if="{{page==2}}">
+  <view class='details-box'>
+      <view class="input-box">
+        姓名： <input class="input-item" placeholder='请输入姓名' value='{{name}}' bindinput='inputName' />
+      </view>
+      <view class="input-box">
+        手机： <input class="input-item" placeholder='请输入手机号码' value='{{mobile}}' bindinput='inputMobile' />
+      </view>
+      <view class="input-box">
+        收件地址： <textarea class="input-item" style='width:100%;' placeholder='请输入详细地址' value='{{address}}' bindinput='inputAddress'></textarea>
+      </view>
+    </view>
+</view>
+
+<view class="page3" wx:if="{{page==3}}">
+  <view class="order-info">
+    亲~您的订单号（长按可复制）：<text selectable='true' style='color:green'>{{curOrder}}</text>
+    总价(未含运费)：<text selectable='true' style='color:green'>{{totalPrice}}</text>
+  </view>
+  <!-- 
+  <view class="img-box">
+    <image class="img-show" src="../../images/{{paypic[curper][curpic]}}" mode='widthFix'></image>
+  </view>
+  <view class="head-btn">
+    <button style='font-size:13px;font-weight:bold;padding-top:10rpx;' bindtap='changePerson'> 找{{(curper==0?"小姐姐":"小哥哥")}}支付 </button>
+  </view>
+  -->
+</view>

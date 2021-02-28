@@ -1,0 +1,89 @@
+/* miniprogram/pages/detail/detail.wxss */
+.head-btn {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+.head-btn button {
+  width: 40%;
+}
+
+.details-box {
+  border: 1px rgb(201, 102, 118) solid;
+  border-radius: 20rpx;
+  margin:20rpx;
+  padding: 10rpx;
+}
+.input-box {
+  margin: 20rpx;
+  font-size: 16px;
+}
+.input-item{
+  border:1px #cac9c9 solid;
+  border-radius: 10rpx;
+}
+
+.page1 {
+  border: 1px rgb(201, 102, 118) solid;
+  border-radius: 10rpx;
+  margin: 10rpx;
+  padding: 20rpx;
+}
+
+.mgoods-list {
+  white-space: pre-line;
+  display: flex;
+  flex-direction: row;
+  height: 110rpx;
+  border-bottom: 3rpx solid #e6e6e6;
+}
+.mgoods-message {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20rpx;
+  justify-content: space-around;
+}
+.mgname{
+  font-weight: 400;
+  color: #4a4a4a;
+  font-size: 30rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.mgprice {
+  font-size: 24rpx;
+  color: #f40;
+  font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+}
+.medit {
+  position: absolute;
+  right: 5%;
+  margin-top: 5%;
+}
+
+.page3 {
+  border: 1px rgb(201, 102, 118) solid;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin: 10rpx;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-show {
+  width:80%;
+}

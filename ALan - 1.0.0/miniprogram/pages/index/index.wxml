@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="img-box">
+  <image src="../../images/head.jpg" style='width:100%;' mode='widthFix'></image>
+</view>
+
+<view class="marquee_box">
+  <view class="marquee_text" style="{{orientation}}:{{marqueeDistance}}px;font-size: {{size}}px;">
+    {{newsmsg}}
+  </view>
+</view>
+
+<view class="classification-box">
+  <view class="classification-row">
+    <view class="classification-item" bindtap="classify" data-id="0" >
+      <image src='/images/0.jpg' mode='widthFix' style='width:100%;'></image>
+    </view>
+    <view class="classification-item" style='margin:0 3%;' bindtap="classify" data-id="1">
+      <image src='/images/1.jpg' mode='widthFix' style='width:100%;'></image>
+    </view>
+    <view class="classification-item" bindtap="classify" data-id="2">
+      <image src='/images/2.jpg' mode='widthFix' style='width:100%;'></image>
+    </view>
+  </view>
+  <view class="classification-row">
+    <view class="classification-item" bindtap="classify" data-id="3">
+      <image src='/images/3.jpg' mode='widthFix' style='width:100%;'></image>
+    </view>
+    <view class="classification-item" style='margin:0 3%;' bindtap="classify" data-id="4">
+      <image src='/images/4.jpg' mode='widthFix' style='width:100%;'></image>
+    </view>
+    <view class="classification-item" bindtap="classify" data-id="5">
+      <image src='/images/5.jpg' mode='widthFix' style='width:100%;'></image>
+    </view>
+  </view>
+  <view class="classification-row">
+    <view class="classification-item" bindtap="classify" data-id="6">
+      <image src='/images/6.jpg' mode='widthFix' style='width:100%;'></image>
+    </view>
+    <view class="classification-item" style='margin:0 3%;' bindtap="classify" data-id="7">
+      <image src='/images/7.jpg' mode='widthFix' style='width:100%;'></image>
+    </view>
+    <view class="classification-item" bindtap="classify" data-id="8">
+      <image src='/images/8.jpg' mode='widthFix' style='width:100%;'></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,115 @@
+/* pages/shoppingCart/shoppingCart.wxss */
+.goods-box {
+  margin-top: 20rpx;
+  margin-bottom: 50rpx;
+}
+.goods-list {
+  white-space: pre-line;
+  display: flex;
+  flex-direction: row;
+  height: 120rpx;
+  padding: 30rpx;
+  border-bottom: 3rpx solid #e6e6e6;
+}
+.goods-message {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20rpx;
+  justify-content: space-around;
+}
+.gname{
+  font-weight: 600;
+  color: #4a4a4a;
+  font-size: 32rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.gclassification {
+  font-weight: 400;
+  color: blue;
+  font-size: 30rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.gprice {
+  font-size: 28rpx;
+  color: #f40;
+  font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+}
+.gbutton {
+  width: 30%;
+  height: 100rpx;
+  position: absolute;
+  right: 40rpx;
+}
+
+.gbutton button {
+  right: 0;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+/*搜索框*/
+.search-box{  
+  margin: 10px 10px 0 0;
+  display: flex;  
+  flex-direction: row  
+}  
+.search{  
+  width: 98%;  
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+  margin-left: 20rpx;  
+}  
+.search input{  
+  margin-left: 60rpx;  
+  height: 60rpx;  
+  border-radius: 5px;  
+}  
+.searchcion {  
+  margin: 10rpx 10rpx 10rpx 10rpx;  
+  position: absolute;  
+  left:25rpx;  
+  z-index: 2;  
+  width: 20px;  
+  height: 20px;  
+  text-align: center;  
+}  
+
+/*功能框*/
+.func-box {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.classification-box {
+  width: 40%;
+  color: rgb(241, 100, 124);
+  border: 1px goldenrod solid;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.classification-box picker {
+  margin: 20rpx 0;
+}
+
+.management-box {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}

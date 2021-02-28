@@ -1,0 +1,10 @@
+<view class="userinfo">
+  <open-data type="userAvatarUrl" class="userinfo-avatar" style=""></open-data>
+  
+  <view style="margin-left:30rpx;color:green">昵称：<open-data type="userNickName" style="margin-left:30rpx;color:pink"></open-data></view>
+</view>
+<button class='main-btn' bindtap='goOrder'>查看订单</button>
+<button class='main-btn' bindtap='goProduct' wx:if="{{isRoot}}">{{manageText[isManaging?1:0]}}</button>
+
+
+

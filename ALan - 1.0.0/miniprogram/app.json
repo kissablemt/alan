@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shoppingcart/shoppingcart",
+    "pages/detail/detail",
+    "pages/product/product",
+    "pages/logs/logs",
+    "pages/product-edit/product-edit",
+    "pages/order/order"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "藏宝箱",
+        "iconPath": "./images/index.jpg",
+        "selectedIconPath": "./images/index.jpg"
+      },
+      {
+        "pagePath": "pages/shoppingcart/shoppingcart",
+        "text": "我的小宝匣",
+        "iconPath": "./images/shoppingcart.jpg",
+        "selectedIconPath": "./images/shoppingcart.jpg"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的事务",
+        "iconPath": "./images/logs.jpg",
+        "selectedIconPath": "./images/logs.jpg"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
